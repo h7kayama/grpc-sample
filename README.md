@@ -44,3 +44,21 @@ $ npm install grpc grpc-tools google-protobuf
 ./node_modules/.bin/grpc_tools_node_protoc -I./protos/ --js_out=import_style=commonjs,binary:./nodejs --grpc_out=./nodejs ./protos/user.proto
 ```
 
+### Run
+```
+$ node nodejs/server.js
+```
+
+```
+$ node nodejs/client.js 1
+{
+  error: false,
+  message: '',
+  user: {
+    id: 1,
+    nickname: 'admin',
+    mailAddress: 'admin@example.com',
+    userType: 1
+  }
+}
+```
