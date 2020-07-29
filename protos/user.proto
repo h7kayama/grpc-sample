@@ -1,5 +1,6 @@
 syntax = "proto3";
 
+// ユーザー情報を表すメッセージ型
 message User {
   uint32 id = 1;
   string nickname = 2;
@@ -13,16 +14,20 @@ message User {
   UserType user_type = 4;
 }
 
+// ユーザー情報のリクエストに使用するメッセージ型
 message UserRequest {
   uint32 id = 1;
 }
 
+// ユーザー情報を返す際に使用するメッセージ型
 message UserResponse {
   bool error = 1;
   string message = 2;
   User user = 3;
 }
 
+// ユーザー管理を行うサービス
 service UserManager {
+  // ユーザー情報を取得する
   rpc get (UserRequest) returns (UserResponse) {}
 }

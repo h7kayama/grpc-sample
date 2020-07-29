@@ -6,7 +6,8 @@ import user_pb2 as user__pb2
 
 
 class UserManagerStub(object):
-    """Missing associated documentation comment in .proto file."""
+    """ユーザー管理を行うサービス
+    """
 
     def __init__(self, channel):
         """Constructor.
@@ -22,10 +23,12 @@ class UserManagerStub(object):
 
 
 class UserManagerServicer(object):
-    """Missing associated documentation comment in .proto file."""
+    """ユーザー管理を行うサービス
+    """
 
     def get(self, request, context):
-        """Missing associated documentation comment in .proto file."""
+        """ユーザー情報を取得する
+        """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
@@ -46,7 +49,8 @@ def add_UserManagerServicer_to_server(servicer, server):
 
  # This class is part of an EXPERIMENTAL API.
 class UserManager(object):
-    """Missing associated documentation comment in .proto file."""
+    """ユーザー管理を行うサービス
+    """
 
     @staticmethod
     def get(request,
