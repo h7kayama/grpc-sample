@@ -31,3 +31,16 @@ user {
   user_type: ADMINISTRATOR
 }
 ```
+
+## Nodejs
+
+### Setup
+```
+$ npm install grpc grpc-tools google-protobuf
+```
+
+### Generate
+```
+./node_modules/.bin/grpc_tools_node_protoc -I./protos/ --js_out=import_style=commonjs,binary:./nodejs --grpc_out=./nodejs ./protos/user.proto
+```
+
