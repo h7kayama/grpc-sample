@@ -14,5 +14,5 @@ $ . venv/bin/activate
 
 ### Generate
 ```
-$ python3 -m grpc_tools.protoc -I./protos --python_out=./python --grpc_python_out=. ./protos/user.proto
+$ python3 -m grpc_tools.protoc -I./protos --python_out=./python --grpc_python_out=./python ./protos/user.proto
 ```
